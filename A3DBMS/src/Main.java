@@ -11,9 +11,10 @@ public class A3 {
           //addStudent("Brendan", "Bower", "BB@email.com", Date.valueOf("2024-03-18"));
           //updateStudentEmail(11, "bb@gmail.com");
           //deleteStudent(11);
-          //getAllStudents();
+          getAllStudents();
     }
 
+    //prints all students and info in the database
     public static void getAllStudents() {
         try {
             //create the connections to the Database
@@ -36,7 +37,7 @@ public class A3 {
             e.printStackTrace();
         };
     }
-
+    //add a student to the database
     public static void addStudent( String first_name, String last_name, String email, Date enrollment_date) {
         try {
             Class.forName("org.postgresql.Driver");
@@ -58,7 +59,7 @@ public class A3 {
             e.printStackTrace();
         };
     }
-
+    //change a studefnt's email
     public static void updateStudentEmail(int student_id, String new_email) {
         try {
             Class.forName("org.postgresql.Driver");
@@ -75,7 +76,7 @@ public class A3 {
             e.printStackTrace();
         }
     }
-
+    //delete a student from the database
     public static void deleteStudent(int student_id) {
         try {
             Class.forName("org.postgresql.Driver");
